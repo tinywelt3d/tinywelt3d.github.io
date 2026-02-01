@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TinyWelt3D</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.svg" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Karla&family=Montserrat&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+      :root {
+        /* Background gradient colors */
+        --rosa-top: #f4acb7;
+        --rosa-mid: #ffe5d9;
+        --beige-bottom: #F6F0E7;
+
+        /* UI colors derived from gradient */
+        --text-primary: #5A3E36;     /* warm brown */
+        --text-secondary: #9B5F5F;   /* muted rose */
+        --button-main: #9d8189;      /* dusty rose */
+        --button-hover: #735960;     /* deeper rose */
+        --button-text: #FFFFFF;
+        --footer-text: #7A5A52;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Karla', sans-serif;
+        background: linear-gradient(
+          180deg,
+          var(--rosa-top) 0%,
+          var(--rosa-mid) 45%,
+          var(--beige-bottom) 100%
+        );
+        color: var(--text-primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+            .logo {
+        width: 250px;
+        height: 250px;
+        background-color: #453539; /* THIS is the color */
+        mask: url("logo_transparent.svg") no-repeat center / contain;
+        -webkit-mask: url("logo.svg") no-repeat center / contain;
+      }
+
+
+      h1 {
+        font-family: 'Comfortaa', cursive;
+        font-size: 2.6rem;
+        margin: 0;
+        color: var(--text-primary);
+      }
+
+      h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin-bottom: 28px;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 260px;
+      }
+
+      .link {
+        background-color: var(--button-main);
+        color: var(--button-text);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 13px;
+        border-radius: 30px;
+        border-color: white;
+        transition: all 0.3s ease;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .link:hover {
+        background-color: var(--button-hover);
+        transform: translateY(-2px) scale(1.02);
+      }
+
+      footer {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 300;
+        font-size: 0.9rem;
+        margin-top: 34px;
+        color: var(--footer-text);
+        opacity: 0.85;
+      }
+
+      footer a {
+        color: var(--text-secondary);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="logo"></div>
+    <h1>@tinywelt3D</h1>
+    <h2>Mini worlds brought to life.</h2>
+
+    <div class="links">
+      <a class="link" href="https://www.etsy.com/shop/TinyWelt3D" target="_blank"><i class="fab fa-etsy"></i> Etsy Shop</a>
+      <a class="link" href="https://makerworld.com/en/@flavia" target="_blank"><i class="fas fa-cube"></i> MakerWorld</a>
+      <a class="link" href="https://www.makeronline.com/en/user/personalInfo/a4428573-face-4e7e-be27-549a0a0f3812.html" target="_blank"><i class="fas fa-cubes"></i> MakerOnline</a>
+      <a class="link" href="https://www.crealitycloud.com/user/8557138796" target="_blank"><i class="fas fa-cloud"></i> Creality Cloud</a>
+      <a class="link" href="https://www.printables.com/@tinywelt3d_3912909" target="_blank"><i class="fas fa-cubes-stacked"></i> Printables</a>
+      <a class="link" href="https://www.instagram.com/tinywelt3d/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a class="link" href="https://www.tiktok.com/@tinywelt3d" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    </div>
+
+    <footer>
+      © 2025 TinyWelt3D
+    </footer>
+  </body>
+</html>
