@@ -1,0 +1,27 @@
+/* Self-hosted fonts (SIL Open Font License 1.1): Comfortaa, Montserrat, Nunito.
+   The .woff2 files are downloaded into /fonts by the deploy workflow
+   (.github/workflows/static.yml), so visitors never connect to Google. */
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/comfortaa-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/montserrat-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('fonts/nunito-variable.woff2') format('woff2');
+}
