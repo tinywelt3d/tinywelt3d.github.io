@@ -31,6 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Download fonts (self-hosted, so visitors never contact Google)
+        run: |
+          mkdir -p fonts
+          curl -fsSL -o fonts/comfortaa-400.woff2  "https://fonts.gstatic.com/s/comfortaa/v47/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrMfIB1Zyc61YA.woff2"
+          curl -fsSL -o fonts/montserrat-600.woff2 "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXp-p7K4KLg.woff2"
+          curl -fsSL -o fonts/nunito-variable.woff2 "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2"
+          ls -l fonts
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
