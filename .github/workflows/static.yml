@@ -38,6 +38,16 @@ jobs:
           curl -fsSL -o fonts/montserrat-600.woff2 "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXp-p7K4KLg.woff2"
           curl -fsSL -o fonts/nunito-variable.woff2 "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2"
           ls -l fonts
+      - name: Build link-preview image (og-image.png)
+        continue-on-error: true
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+          mkdir -p ~/.local/share/fonts
+          curl -fsSL -o ~/.local/share/fonts/Comfortaa.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/comfortaa/Comfortaa%5Bwght%5D.ttf"
+          curl -fsSL -o ~/.local/share/fonts/Nunito.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/Nunito%5Bwght%5D.ttf"
+          fc-cache -f
+          rsvg-convert -w 1200 -h 630 og-image.svg -o og-image.png
+          ls -l og-image.png
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
