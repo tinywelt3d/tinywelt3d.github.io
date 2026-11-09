@@ -65,7 +65,8 @@
   function spawn() {
     if (document.hidden) return; // pause while the tab is in the background
     var d = document.createElement('div');
-    var size = rand(SETTINGS.minSize, SETTINGS.maxSize);
+    var small = window.innerWidth < 600 ? 0.8 : 1; // slightly smaller shapes on phones
+    var size = rand(SETTINGS.minSize, SETTINGS.maxSize) * small;
     var dur = rand(SETTINGS.minSeconds, SETTINGS.maxSeconds);
     d.className = 'fx';
     d.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + rand(0, 95) + '%;top:' + rand(15, 95) + '%;' +
@@ -75,6 +76,18 @@
     setTimeout(function () { d.remove(); }, dur * 1000 + 100);
   }
 
-  for (var i = 0; i < 7; i++) setTimeout(spawn, i * 220);
-  setInterval(spawn, SETTINGS.everyMs);
+  // Scale the amount to the screen size, so phones get the same density as a desktop
+  // instead of the same number of shapes. everyMs is tuned for a 1440×900 screen.
+  function screenFactor() {
+    var area = window.innerWidth * window.innerHeight;
+    return Math.max(1, (1440 * 900) / Math.max(area, 1));
+  }
+  function loop() {
+    spawn();
+    setTimeout(loop, SETTINGS.everyMs * screenFactor());
+  }
+
+  var startCount = Math.max(2, Math.round(7 / screenFactor()));
+  for (var i = 0; i < startCount; i++) setTimeout(spawn, i * 220);
+  setTimeout(loop, SETTINGS.everyMs * screenFactor());
 })();
