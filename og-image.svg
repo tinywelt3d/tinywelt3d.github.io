@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Link preview card for TinyWelt3D. Converted to og-image.png by the deploy workflow. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4acb7"/>
+      <stop offset="0.5" stop-color="#ffe5d9"/>
+      <stop offset="1" stop-color="#F6F0E7"/>
+    </linearGradient>
+    <filter id="cocoa" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#453539"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Logo -->
+  <image x="95" y="95" width="440" height="440" xlink:href="logo.svg" href="logo.svg" filter="url(#cocoa)"/>
+
+  <!-- Text -->
+  <text x="610" y="270" font-family="Comfortaa" font-size="88" fill="#5A3E36">TinyWelt3D</text>
+  <text x="614" y="345" font-family="Nunito" font-weight="600" font-size="42" fill="#9B5F5F">Mini worlds brought to life.</text>
+  <text x="614" y="405" font-family="Nunito" font-weight="400" font-size="28" fill="#7A5A52">Handmade 3D-printed dioramas &amp; lamps</text>
+
+  <!-- Shapes: boat, cube, spool -->
+  <g transform="translate(614 440) scale(2.2)">
+    <g stroke="#5A3E36" stroke-width="1.2" stroke-linejoin="round" fill="#f8cbd2">
+      <path d="M15 3 L19 3 L18.8 8.5 L15.2 8.5 Z"/>
+      <path d="M12.5 8.5 L27 7.5 L27 10 L12.5 11 Z"/>
+      <path d="M13.5 11 L26 10 L25.2 21 L14.2 23 Z"/>
+      <path d="M17.2 22.4 L17.2 15.5 C17.2 13.6 21.6 13.4 21.6 15.3 L21.4 21.7" fill="#e38d9c"/>
+      <path d="M4 24.5 C12 24 19 23.5 24 20.5 C26 19 28 18.5 37 15.5 L37.5 18 C37 27 32 33 26 35 L8 35 Z" fill="#f4acb7"/>
+      <circle cx="32" cy="22.5" r="1.6" fill="#f8cbd2"/>
+    </g>
+  </g>
+  <g transform="translate(730 440) scale(2.2)">
+    <polygon points="20,4 36,12 20,20 4,12" fill="#fff"/>
+    <polygon points="4,12 20,20 20,37 4,29" fill="#f4acb7"/>
+    <polygon points="36,12 20,20 20,37 36,29" fill="#9d8189"/>
+    <g fill="none" stroke="#5A3E36" stroke-width="1.2" stroke-linejoin="round">
+      <polygon points="20,4 36,12 36,29 20,37 4,29 4,12"/>
+      <polyline points="4,12 20,20 36,12"/>
+      <line x1="20" y1="20" x2="20" y2="37"/>
+    </g>
+  </g>
+  <g transform="translate(846 440) scale(2.2)">
+    <ellipse cx="23" cy="20" rx="12.5" ry="16" fill="#735960"/>
+    <path d="M17 5.5 C26 5.5 31.5 12 31.5 20 C31.5 28 26 34.5 17 34.5 Z" fill="#f4acb7"/>
+    <g fill="none" stroke="#e38d9c" stroke-width=".8" stroke-linecap="round">
+      <path d="M22 6.5 C28 9 30 15 30 20 C30 25 28 31 22 33.5"/>
+      <path d="M25 8 C29 11 30.8 16 30.8 20 C30.8 25 29 29 25.5 32"/>
+      <path d="M19.5 6 C25 8 28 14 28.3 20 C28.5 26 25.5 32 19.5 34"/>
+    </g>
+    <path d="M29.5 29 C30.5 32.5 31 35 34.5 37.5" fill="none" stroke="#f4acb7" stroke-width="1.6" stroke-linecap="round"/>
+    <ellipse cx="16.5" cy="20" rx="12.5" ry="15.5" fill="#9d8189"/>
+    <g fill="#f4acb7">
+      <path d="M13 7.5 Q16.5 6.6 20 7.5 L18.6 12 Q16.5 11.5 14.4 12 Z"/>
+      <path d="M13 32.5 Q16.5 33.4 20 32.5 L18.6 28 Q16.5 28.5 14.4 28 Z"/>
+      <path d="M5.4 16.3 Q5 20 5.4 23.7 L9.6 22.2 Q9.3 20 9.6 17.8 Z"/>
+      <path d="M27.6 16.3 Q28 20 27.6 23.7 L23.4 22.2 Q23.7 20 23.4 17.8 Z"/>
+    </g>
+    <ellipse cx="16.5" cy="20" rx="4.3" ry="5.2" fill="#735960"/>
+    <path d="M17.6 16.3 C16.3 18 16.3 22 17.6 23.7 C18.9 22 18.9 18 17.6 16.3 Z" fill="#fff"/>
+  </g>
+
+  <text x="614" y="580" font-family="Nunito" font-weight="600" font-size="28" fill="#9d8189">tinywelt3d.github.io</text>
+</svg>
